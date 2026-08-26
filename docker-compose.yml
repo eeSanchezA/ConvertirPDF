@@ -9,7 +9,11 @@ services:
       - FLASK_DEBUG=1
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      target: development
+      args:
+        VITE_API_URL: ${VITE_API_URL:-http://localhost:5000}
     ports:
       - "5173:5173"
     volumes:
@@ -17,6 +21,6 @@ services:
       - ./frontend/public:/app/public
       - ./frontend/index.html:/app/index.html
     environment:
-      - VITE_API_URL=${VITE_API_URL}
+      - VITE_API_URL=${VITE_API_URL:-http://localhost:5000}
     depends_on:
       - backend
