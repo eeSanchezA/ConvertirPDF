@@ -13,6 +13,7 @@ const BANKS = [
   { value: 'bantrab', label: 'Bantrab' },
   { value: 'interbanco', label: 'Interbanco' },
   { value: 'bi', label: 'Banco Industrial' },
+  { value: 'bi_tarjeta', label: 'Tarjeta de crédito BI' },
 ];
 
 const MONTHS = [
@@ -397,7 +398,7 @@ function App() {
         </main>
 
         <p className="footer-note">
-          G&T <span>·</span> BAC <span>·</span> Banrural <span>·</span> BAM <span>·</span> Bantrab <span>·</span> Interbanco <span>·</span> BI
+          G&T <span>·</span> BAC <span>·</span> Banrural <span>·</span> BAM <span>·</span> Bantrab <span>·</span> Interbanco <span>·</span> BI <span>·</span> BI Tarjeta
         </p>
       </div>
 

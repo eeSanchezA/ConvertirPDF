@@ -12,6 +12,7 @@ from Converters.Bantrab import convert_bantrab
 from Converters.Interbanco import convert_interbanco
 from Converters.BI import convert_bi
 from Converters.BacTarjeta import convert_bac_statement_to_excel
+from Converters.BITarjeta import convert_bi_tarjeta
 
 
 # Configurar logging
@@ -101,6 +102,7 @@ def upload_file():
                 'bac': convert_pdf_to_excel,
                 'banrural': convert_banrural,
                 'bi': convert_bi,
+                'bi_tarjeta': convert_bi_tarjeta,
                 'bac_tarjeta': convert_bac_statement_to_excel,
                 'bam': convert_bam_pdf_to_excel,
             }
